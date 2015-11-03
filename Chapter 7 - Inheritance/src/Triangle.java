@@ -2,6 +2,18 @@ public class Triangle extends TwoDShape
 {
     String style;
 
+    public Triangle()
+    {
+        super();
+        style = "none";
+    }
+
+    public Triangle( double x )
+    {
+        super( x );
+        style = "filled";
+    }
+
     public Triangle( String s, double w, double h )
     {
         super( w, h );

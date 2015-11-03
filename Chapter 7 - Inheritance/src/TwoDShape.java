@@ -5,6 +5,16 @@ public class TwoDShape
 
     private double width;
 
+    public TwoDShape()
+    {
+        width = height = 0;
+    }
+
+    public TwoDShape( double x )
+    {
+        width = height = x;
+    }
+
     public TwoDShape( double w, double h )
     {
         width = w;
