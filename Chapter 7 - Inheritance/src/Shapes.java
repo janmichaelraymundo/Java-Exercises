@@ -2,16 +2,8 @@ public class Shapes
 {
     public static void main( String[] args )
     {
-        Triangle t1 = new Triangle();
-        Triangle t2 = new Triangle();
-
-        t1.width = 4;
-        t1.height = 4;
-        t1.style = "filled";
-
-        t2.width = 8;
-        t2.height = 12;
-        t2.style = "outlined";
+        Triangle t1 = new Triangle( "filled", 4, 4 );
+        Triangle t2 = new Triangle( "outline", 8, 12 );
 
         System.out.println( "Info for t1: " );
         t1.showStyle();

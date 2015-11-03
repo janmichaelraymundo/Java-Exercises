@@ -2,12 +2,19 @@ public class Triangle extends TwoDShape
 {
     String style;
 
-    double area()
+    public Triangle( String s, double w, double h )
     {
-        return width * height / 2;
+        style = s;
+        setWidth( w );
+        setHeight( h );
     }
 
-    void showStyle()
+    public double area()
+    {
+        return getWidth() * getHeight() / 2;
+    }
+
+    public void showStyle()
     {
         System.out.println( "Triangle is " + style );
     }
