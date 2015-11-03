@@ -6,8 +6,27 @@ class Vehicle
 
     int mpg; // fuel consumption in miles per gallon
 
-    public void range()
+    public Vehicle( int p, int f, int m )
     {
-        System.out.println("Range is " + fuelcap * mpg);
+        passengers = p;
+        fuelcap = f;
+        mpg = m;
+    }
+
+    public Vehicle()
+    {
+        passengers = 0;
+        fuelcap = 0;
+        mpg = 0;
+    }
+
+    public int range()
+    {
+        return fuelcap * mpg;
+    }
+
+    double fuelNeeded( int miles )
+    {
+        return ( double ) miles / mpg;
     }
 }
