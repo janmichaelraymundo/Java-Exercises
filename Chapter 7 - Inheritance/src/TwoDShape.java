@@ -1,17 +1,14 @@
 public class TwoDShape
 {
-    private double width;
 
     private double height;
 
-    public void showDim()
-    {
-        System.out.println( "Width and height are " + width + " and " + height );
-    }
+    private double width;
 
-    public double getWidth()
+    public TwoDShape( double w, double h )
     {
-        return width;
+        width = w;
+        height = h;
     }
 
     public double getHeight()
@@ -19,13 +16,23 @@ public class TwoDShape
         return height;
     }
 
-    public void setWidth( double w )
+    public double getWidth()
     {
-        width = w;
+        return width;
     }
 
     public void setHeight( double h )
     {
         height = h;
+    }
+
+    public void setWidth( double w )
+    {
+        width = w;
+    }
+
+    public void showDim()
+    {
+        System.out.println( "Width and height are " + width + " and " + height );
     }
 }

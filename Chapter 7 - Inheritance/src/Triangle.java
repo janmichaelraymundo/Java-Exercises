@@ -4,9 +4,8 @@ public class Triangle extends TwoDShape
 
     public Triangle( String s, double w, double h )
     {
+        super( w, h );
         style = s;
-        setWidth( w );
-        setHeight( h );
     }
 
     public double area()
