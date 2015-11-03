@@ -1,7 +1,7 @@
 /*
- * Try this 3-2 A simple help system.
+ * Try this 3-3 A simple help system.
  */
-public class Help2
+public class Help3
 {
     public static void main(String[] args) throws java.io.IOException
     {
@@ -12,7 +12,9 @@ public class Help2
         System.out.println("  2. switch");
         System.out.println("  3. for");
         System.out.println("  4. while");
-        System.out.println("  5. do-while\n");
+        System.out.println("  5. do-while");
+        System.out.println("  6. break");
+        System.out.println("  7. continue\n");
         System.out.print("Choose one: ");
         choice = (char) System.in.read();
 
@@ -48,6 +50,14 @@ public class Help2
                 System.out.println("do {");
                 System.out.println("  statement;");
                 System.out.println("} while (condition);");
+                break;
+            case '6':
+                System.out.println("The break:\n");
+                System.out.println("break; or break label;");
+                break;
+            case '7':
+                System.out.println("The continue:\n");
+                System.out.println("continue; or continue label");
                 break;
             default:
                 System.out.println("Selection not found");
