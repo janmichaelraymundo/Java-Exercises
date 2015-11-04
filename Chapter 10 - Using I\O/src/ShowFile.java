@@ -15,7 +15,7 @@ public class ShowFile
     public static void main( String[] args )
     {
         int i;
-        FileInputStream fin;
+        FileInputStream fin = null;
 
         System.out.println( "Filename: " + args[0] );
 
@@ -29,15 +29,6 @@ public class ShowFile
         try
         {
             fin = new FileInputStream( args[0] );
-        }
-        catch( FileNotFoundException e )
-        {
-            System.out.println( "File Not Found" );
-            return;
-        }
-
-        try
-        {
             do
             {
                 i = fin.read();
@@ -45,18 +36,25 @@ public class ShowFile
             }
             while( i != -1 );
         }
+        catch( FileNotFoundException e )
+        {
+            System.out.println( "File Not Found" );
+            return;
+        }
         catch( IOException e )
         {
             System.out.println( "Error reading file." );
         }
-
-        try
+        finally
         {
-            fin.close();
-        }
-        catch( IOException e )
-        {
-            System.out.println( "Error closing file." );
+            try
+            {
+                fin.close();
+            }
+            catch( IOException e )
+            {
+                System.out.println( "Error closing file." );
+            }
         }
     }
 }
